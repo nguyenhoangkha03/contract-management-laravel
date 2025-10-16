@@ -1,0 +1,489 @@
+/* File: public/css/enhanced-widgets.css */
+
+/* ============ STATS CARDS ENHANCEMENT ============ */
+
+/* Stats overview container */
+.fi-stats-overview {
+    margin-bottom: 3rem;
+    padding: 0;
+}
+
+.fi-stats-overview .fi-stats-overview-widgets {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Individual stats widget transformation */
+.fi-stats-overview-stat {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95)) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    border: 1px solid rgba(148, 163, 184, 0.2) !important;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Animated border gradient */
+.fi-stats-overview-stat::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4, #10b981, #f59e0b, #ef4444) !important;
+    background-size: 300% 100% !important;
+    animation: gradient-flow 4s ease infinite !important;
+}
+
+/* Hover effects */
+.fi-stats-overview-stat:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(59, 130, 246, 0.3) !important;
+    border-color: rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Stats content styling */
+.fi-stats-overview-stat-label {
+    font-size: 0.75rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #94a3b8 !important;
+    margin-bottom: 1rem !important;
+    opacity: 0.9 !important;
+}
+
+.fi-stats-overview-stat-value {
+    font-size: 2.75rem !important;
+    font-weight: 900 !important;
+    color: #f8fafc !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.fi-stats-overview-stat-description {
+    color: #22c55e !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.fi-stats-overview-stat-icon {
+    color: #22c55e !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* Chart area in stats */
+.fi-stats-overview-stat-chart {
+    height: 60px !important;
+    margin-top: 1rem !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* ============ CHART WIDGETS ENHANCEMENT ============ */
+
+/* Chart container styling */
+.fi-wi-chart {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95)) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    border: 1px solid rgba(148, 163, 184, 0.2) !important;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.fi-wi-chart::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6) !important;
+    background-size: 200% 100% !important;
+    animation: gradient-flow 3s ease infinite !important;
+}
+
+.fi-wi-chart:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Chart header */
+.fi-wi-chart-header {
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+.fi-wi-chart-heading {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    margin-bottom: 0.5rem !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Chart filters */
+.fi-wi-chart-filters {
+    display: flex !important;
+    gap: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+.fi-select-input {
+    background: rgba(51, 65, 85, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.3) !important;
+    border-radius: 12px !important;
+    color: #f8fafc !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-select-input:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+    background: rgba(51, 65, 85, 1) !important;
+}
+
+/* Chart canvas area */
+.fi-wi-chart canvas {
+    border-radius: 12px !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* ============ TABLE WIDGET ENHANCEMENT ============ */
+
+/* Table container */
+.fi-wi-table {
+    background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95)) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(148, 163, 184, 0.2) !important;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    overflow: hidden !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.fi-wi-table::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 3px !important;
+    background: linear-gradient(90deg, #10b981, #06b6d4, #3b82f6) !important;
+    background-size: 200% 100% !important;
+    animation: gradient-flow 3s ease infinite !important;
+}
+
+.fi-wi-table:hover {
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        0 0 30px rgba(16, 185, 129, 0.2) !important;
+}
+
+/* Table header */
+.fi-wi-table-header {
+    padding: 2rem 2rem 1rem 2rem !important;
+    background: rgba(51, 65, 85, 0.3) !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+.fi-wi-table-heading {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #f8fafc !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Table search */
+.fi-ta-search {
+    margin: 1rem 2rem !important;
+}
+
+.fi-ta-search .fi-input {
+    background: rgba(51, 65, 85, 0.8) !important;
+    border: 1px solid rgba(148, 163, 184, 0.3) !important;
+    border-radius: 12px !important;
+    color: #f8fafc !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.fi-ta-search .fi-input:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Table structure */
+.fi-ta {
+    background: transparent !important;
+    border-radius: 0 !important;
+}
+
+/* Table header row */
+.fi-ta-header {
+    background: rgba(51, 65, 85, 0.5) !important;
+}
+
+.fi-ta-header-cell {
+    font-weight: 700 !important;
+    color: #cbd5e1 !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em !important;
+    padding: 1rem !important;
+    border-bottom: 2px solid rgba(59, 130, 246, 0.3) !important;
+    background: rgba(51, 65, 85, 0.3) !important;
+}
+
+/* Table rows */
+.fi-ta-row {
+    transition: all 0.3s ease !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1) !important;
+    background: rgba(15, 23, 42, 0.3) !important;
+}
+
+.fi-ta-row:hover {
+    background: rgba(59, 130, 246, 0.1) !important;
+    transform: translateX(4px) !important;
+    box-shadow: inset 3px 0 0 #3b82f6 !important;
+}
+
+.fi-ta-row:nth-child(even) {
+    background: rgba(30, 41, 59, 0.3) !important;
+}
+
+.fi-ta-row:nth-child(even):hover {
+    background: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Table cells */
+.fi-ta-cell {
+    padding: 1rem !important;
+    color: #e2e8f0 !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1) !important;
+}
+
+.fi-ta-cell:first-child {
+    border-left: none !important;
+}
+
+/* Table pagination */
+.fi-ta-pagination {
+    padding: 1rem 2rem !important;
+    background: rgba(51, 65, 85, 0.3) !important;
+    border-top: 1px solid rgba(148, 163, 184, 0.2) !important;
+}
+
+.fi-ta-pagination .fi-btn {
+    background: rgba(59, 130, 246, 0.2) !important;
+    border: 1px solid rgba(59, 130, 246, 0.3) !important;
+    color: #93c5fd !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.fi-ta-pagination .fi-btn:hover {
+    background: rgba(59, 130, 246, 0.4) !important;
+    color: #dbeafe !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ============ ANIMATIONS ============ */
+
+@keyframes gradient-flow {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply entrance animations */
+.fi-stats-overview {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.fi-stats-overview-stat {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.fi-stats-overview-stat:nth-child(1) { animation-delay: 0.1s; }
+.fi-stats-overview-stat:nth-child(2) { animation-delay: 0.2s; }
+.fi-stats-overview-stat:nth-child(3) { animation-delay: 0.3s; }
+.fi-stats-overview-stat:nth-child(4) { animation-delay: 0.4s; }
+.fi-stats-overview-stat:nth-child(5) { animation-delay: 0.5s; }
+.fi-stats-overview-stat:nth-child(6) { animation-delay: 0.6s; }
+
+.fi-wi-chart {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.fi-wi-chart:nth-of-type(1) { animation-delay: 0.7s; }
+.fi-wi-chart:nth-of-type(2) { animation-delay: 0.8s; }
+
+.fi-wi-table {
+    animation: fadeInUp 0.8s ease-out 0.9s both;
+}
+
+/* ============ RESPONSIVE DESIGN ============ */
+
+@media (max-width: 1024px) {
+    .fi-stats-overview .fi-stats-overview-widgets {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+    }
+    
+    .fi-stats-overview-stat {
+        padding: 1.5rem;
+    }
+    
+    .fi-wi-chart {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fi-stats-overview .fi-stats-overview-widgets {
+        grid-template-columns: 1fr;
+    }
+    
+    .fi-stats-overview-stat-value {
+        font-size: 2.25rem !important;
+    }
+    
+    .fi-wi-chart-heading {
+        font-size: 1.125rem !important;
+    }
+    
+    .fi-ta-cell {
+        padding: 0.75rem 0.5rem !important;
+        font-size: 0.875rem !important;
+    }
+}
+
+/* ============ LOADING STATES ============ */
+
+.fi-wi-chart-loading,
+.fi-wi-table-loading,
+.fi-stats-overview-loading {
+    background: linear-gradient(90deg, rgba(51, 65, 85, 0.5) 25%, rgba(71, 85, 105, 0.5) 50%, rgba(51, 65, 85, 0.5) 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+    border-radius: 12px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* ============ ACCESSIBILITY ============ */
+
+.fi-stats-overview-stat:focus-within,
+.fi-wi-chart:focus-within,
+.fi-wi-table:focus-within {
+    outline: 3px solid rgba(59, 130, 246, 0.5);
+    outline-offset: 2px;
+}
+
+.fi-ta-row:focus-within {
+    background: rgba(59, 130, 246, 0.2) !important;
+    outline: 2px solid rgba(59, 130, 246, 0.5);
+    outline-offset: -2px;
+}
+
+/* ============ CHART SPECIFIC ENHANCEMENTS ============ */
+
+/* Chart.js canvas improvements */
+canvas {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Chart legend styling */
+.fi-wi-chart .chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.fi-wi-chart .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.fi-wi-chart .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
